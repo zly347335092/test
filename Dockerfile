@@ -1,3 +1,4 @@
 FROM nginx:latest
 RUN mkdir /data
-COPY config/test.conf /etc/nginx/conf.d/
+COPY ./config/* /etc/nginx/conf.d/
+CMD ["nginx" "-g" "daemon off;"]
