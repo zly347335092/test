@@ -71,7 +71,7 @@ pipeline {
                     ) {
                         sh '''
                         kubectl apply -f `pwd`/deploy.yaml -n pro
-                        kubectl wait --for=condition=Ready pod -l app=cicd-demo --timeout=60s -n pro
+                        kubectl wait --for=condition=Ready pod -l app=cicd-demo --timeout=60s -n ci
                         '''
                     }
                 }
