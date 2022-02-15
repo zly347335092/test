@@ -17,7 +17,7 @@ spec:                 #期待运行状态
     spec:             #pod容器期望的状态
       containers:
         - name: cicd-demo
-          image: registry.cn-chengdu.aliyuncs.com/zlydock/demo
+          image: registry.cn-chengdu.aliyuncs.com/zlydock/zly
           imagePullPolicy: IfNotPresent
           env:
             - name: JVM_OPTS
