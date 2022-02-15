@@ -48,8 +48,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh label:'nginx building', script: 'git url: "https://github.com/zly347335092/test.git"'
-                }
+                sh label:'maven building', script: ''
             }
         }
 
@@ -72,10 +71,11 @@ pipeline {
                     ) {
                         sh '''
                         kubectl apply -f `pwd`/deploy.yaml -n pro
-                        kubectl wait --for=condition=Ready pod -l app=gin-sample --timeout=60s -n pro
+                        kubectl wait --for=condition=Ready pod -l app=cicd-demo --timeout=60s -n pro
                         '''
                     }
                 }
             }
         }
     }
+}
