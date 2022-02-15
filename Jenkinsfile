@@ -48,7 +48,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh label:'nginx building', script: ''
+                sh label:'nginx building', script: 'git url: "https://github.com/zly347335092/test.git"'
                 }
             }
         }
