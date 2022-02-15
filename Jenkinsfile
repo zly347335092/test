@@ -55,7 +55,7 @@ pipeline {
         stage('Image Build And Publish') {
             steps {
                 container("kaniko") {
-                    sh "kaniko -f `pwd`/Dockerfile -c `pwd` -d registry.cn-chengdu.aliyuncs.com/zlydock/zly:v22"
+                    sh "kaniko -f `pwd`/Dockerfile -c `pwd` -d registry.cn-chengdu.aliyuncs.com/zlydock/zly:v23"
                 }
             }
         }
