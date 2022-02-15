@@ -48,7 +48,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh label:'maven building', script: ''
+                sh label:'maven building', script: 'echo `pwd`'
             }
         }
 
